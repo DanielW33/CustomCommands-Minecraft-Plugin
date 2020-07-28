@@ -1,0 +1,10 @@
+main: CustomCommands
+name: CustomCommands
+version: 0.0.1
+author: MuchDan
+api-version: 1.15
+
+commands:
+  CustomCommands:
+    description: Reload CustomCommands plugin
+    permission: CustomCommands.CustomCommands

@@ -1,0 +1,49 @@
+######################################
+##  CustomCommands
+##  Created by: MuchDan
+##  Date: 6/23/20
+##  Purpose: The ability to create custom commands without hard coding them into a plugin.
+##  you can use this plugin to run other plugins commands, and Send custom messages to players.
+Commands:
+  CommandsList:                                               #Command Name: Does not matter. For labeling purposes only.
+    Command: '#'                                              #Command: 'What is detected' This is what is detected by the server.
+    SetCanceled: true
+    Mode: Text                                                #Mode: Text/Command     if mode is text, it will send SendToChat to player. If Command, it will apply that command to %player%
+    SendToChat:
+      - '&7Type &b#Help&7 to view all custom commands'        #Messages being sent to chat, or command being used. You can write as many strings as you want here.
+  Help:
+    Command: '#Help'
+    SetCanceled: true
+    Mode: Text
+    SendToChat:
+      - '&7---------- &6ServerMC &bCustom Commands &7----------'
+      - '&7Type &b#CustomItems&7 to see a list of custom items'
+      - '&7Type &b#Drills&7 to see a list of Drills commands'
+      - '&7To see all Rankup commands type &b#Ranks'
+      - '&7-------------------------------------------------'
+  Drills:
+    Command: '#Drills'
+    SetCanceled: true
+    Mode: Text
+    SendToChat:
+      - '&7---------- &6ServerMC &bDrill Commands &7----------'
+      - '&7Type &b/Drill Bal&7 to see your current Drill Jobs balances'
+      - ''
+      - '&7----------------------------------------------'
+  CustomItems:
+    Command: '#CustomItems'
+    SetCanceled: true
+    Mode: Command
+    SendToChat:
+      - 'sudo %player% cc knowledge'
+  Rankup:
+    Command: '#Ranks'
+    SetCanceled: true
+    Mode: Text
+    SendToChat:
+      - '&7---------- &6ServerMC &bRank Commands &7----------'
+      - '&7To view all ranks, type &b/Ranks'
+      - '&7Type &b/Rankup&7to progress to the next rank'
+      - '&cNote that in order to rankup you must type &b/Rankup &4then'
+      - '&b/Rankup confirm'
+      - '---------------------------------------------'
